@@ -13,12 +13,12 @@ Install the SDK by adding the following dependency in your project's pom.xml fil
 <dependency>
   <groupId>io.github.git-fudge</groupId>
   <artifactId>maven-testing-new</artifactId>
-  <version>5.5.100</version>
+  <version>5.5.101</version>
 </dependency>
 ```
 
 You can also view the package at:
-https://mvnrepository.com/artifact/io.github.git-fudge/maven-testing-new/5.5.100
+https://mvnrepository.com/artifact/io.github.git-fudge/maven-testing-new/5.5.101
 
 ## Test the SDK
 
@@ -32,7 +32,7 @@ In Eclipse, for running the tests do the following:
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
@@ -53,20 +53,20 @@ APIMATICCalculatorClient client = new APIMATICCalculatorClient.Builder()
 
 ## List of APIs
 
-* [Simple Calculator](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/controllers/simple-calculator.md)
+* [Simple Calculator](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/controllers/simple-calculator.md)
 
 ## Classes Documentation
 
-* [Utility Classes](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/utility-classes.md)
-* [HttpRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-request.md)
-* [HttpResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-response.md)
-* [HttpStringResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-string-response.md)
-* [HttpContext](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-context.md)
-* [HttpBodyRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-body-request.md)
-* [HttpCallback Interface](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-callback-interface.md)
-* [Headers](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/headers.md)
-* [ApiException](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/api-exception.md)
-* [Configuration Interface](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/configuration-interface.md)
-* [HttpClientConfiguration](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-client-configuration.md)
-* [HttpClientConfiguration.Builder](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-client-configuration-builder.md)
+* [Utility Classes](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/utility-classes.md)
+* [HttpRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-request.md)
+* [HttpResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-response.md)
+* [HttpStringResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-string-response.md)
+* [HttpContext](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-context.md)
+* [HttpBodyRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-body-request.md)
+* [HttpCallback Interface](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-callback-interface.md)
+* [Headers](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/headers.md)
+* [ApiException](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/api-exception.md)
+* [Configuration Interface](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/configuration-interface.md)
+* [HttpClientConfiguration](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-client-configuration.md)
+* [HttpClientConfiguration.Builder](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-client-configuration-builder.md)
 
