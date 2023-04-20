@@ -7,66 +7,61 @@ Simple calculator API hosted on APIMATIC
 
 ## Install the Package
 
-Install the SDK by adding the following dependency in your project's pom.xml file:
+The package is compatible with Python versions `3 >=3.7, <= 3.11`.
+Install the package from PyPi using the following pip command:
 
-```xml
-<dependency>
-  <groupId>io.github.git-fudge</groupId>
-  <artifactId>maven-testing-new</artifactId>
-  <version>5.5.100</version>
-</dependency>
+```python
+pip install myUniquePythonPackageName==5.5.101
 ```
 
 You can also view the package at:
-https://mvnrepository.com/artifact/io.github.git-fudge/maven-testing-new/5.5.100
+https://pypi.python.org/pypi/myUniquePythonPackageName/5.5.101
 
 ## Test the SDK
 
-The generated code and the server can be tested using automatically generated test cases.
-JUnit is used as the testing framework and test runner.
+You can test the generated SDK and the server with test cases. `unittest` is used as the testing framework and `pytest` is used as the test runner. You can run the tests as follows:
 
-In Eclipse, for running the tests do the following:
+Navigate to the root directory of the SDK and run the following commands
 
-1. Select the project APIMATICCalculatorLib from the package explorer.
-2. Select `Run -> Run as -> JUnit Test` or use `Alt + Shift + X` followed by `T` to run the Tests.
+```
+pip install -r test-requirements.txt
+pytest
+```
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
 | `environment` | Environment | The API environment. <br> **Default: `Environment.PRODUCTION`** |
-| `httpClientConfig` | [`ReadonlyHttpClientConfiguration`](doc/http-client-configuration.md) | Http Client Configuration instance. |
+| `http_client_instance` | `HttpClient` | The Http Client passed from the sdk user for making requests |
+| `override_http_client_configuration` | `bool` | The value which determines to override properties of the passed Http Client from the sdk user |
+| `http_call_back` | `HttpCallBack` | The callback value that is invoked before and after an HTTP call is made to an endpoint |
+| `timeout` | `float` | The value to use for connection timeout. <br> **Default: 60** |
+| `max_retries` | `int` | The number of times to retry an endpoint call if it fails. <br> **Default: 0** |
+| `backoff_factor` | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 2** |
+| `retry_statuses` | `Array of int` | The http statuses on which retry is to be done. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
+| `retry_methods` | `Array of string` | The http methods on which retry is to be done. <br> **Default: ['GET', 'PUT']** |
 
 The API client can be initialized as follows:
 
-```java
-APIMATICCalculatorClient client = new APIMATICCalculatorClient.Builder()
-    .httpClientConfig(configBuilder -> configBuilder
-            .timeout(0))
-    .environment(Environment.PRODUCTION)
-    .build();
+```python
+from apimaticcalculator.apimaticcalculator_client import ApimaticcalculatorClient
+from apimaticcalculator.configuration import Environment
+
+client = ApimaticcalculatorClient()
 ```
 
 ## List of APIs
 
-* [Simple Calculator](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/controllers/simple-calculator.md)
+* [Simple Calculator](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/controllers/simple-calculator.md)
 
 ## Classes Documentation
 
-* [Utility Classes](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/utility-classes.md)
-* [HttpRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-request.md)
-* [HttpResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-response.md)
-* [HttpStringResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-string-response.md)
-* [HttpContext](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-context.md)
-* [HttpBodyRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-body-request.md)
-* [HttpCallback Interface](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-callback-interface.md)
-* [Headers](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/headers.md)
-* [ApiException](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/api-exception.md)
-* [Configuration Interface](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/configuration-interface.md)
-* [HttpClientConfiguration](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-client-configuration.md)
-* [HttpClientConfiguration.Builder](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-client-configuration-builder.md)
+* [Utility Classes](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/utility-classes.md)
+* [HttpResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-response.md)
+* [HttpRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-request.md)
 
