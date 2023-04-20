@@ -10,11 +10,11 @@ Simple calculator API hosted on APIMATIC
 If you are building with .NET CLI tools then you can also use the following command:
 
 ```bash
-dotnet add package myUniqueCSharpPackage29 --version 5.5.101
+dotnet add package myUniqueCSharpPackage29 --version 5.5.102
 ```
 
 You can also view the package at:
-https://www.nuget.org/packages/myUniqueCSharpPackage29/5.5.101
+https://www.nuget.org/packages/myUniqueCSharpPackage29/5.5.102
 
 ## Test the SDK
 
@@ -22,7 +22,7 @@ The generated SDK also contain one or more Tests, which are contained in the Tes
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
@@ -41,17 +41,17 @@ APIMATICCalculator.Standard.APIMATICCalculatorClient client = new APIMATICCalcul
 
 ## List of APIs
 
-* [Simple Calculator](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/controllers/simple-calculator.md)
+* [Simple Calculator](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/controllers/simple-calculator.md)
 
 ## Classes Documentation
 
-* [Utility Classes](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/utility-classes.md)
-* [HttpRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-request.md)
-* [HttpResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-response.md)
-* [HttpStringResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-string-response.md)
-* [HttpContext](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-context.md)
-* [HttpClientConfiguration](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-client-configuration.md)
-* [HttpClientConfiguration Builder](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/http-client-configuration-builder.md)
-* [IAuthManager](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/i-auth-manager.md)
-* [ApiException](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/api-exception.md)
+* [Utility Classes](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/utility-classes.md)
+* [HttpRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/http-request.md)
+* [HttpResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/http-response.md)
+* [HttpStringResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/http-string-response.md)
+* [HttpContext](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/http-context.md)
+* [HttpClientConfiguration](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/http-client-configuration.md)
+* [HttpClientConfiguration Builder](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/http-client-configuration-builder.md)
+* [IAuthManager](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/i-auth-manager.md)
+* [ApiException](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.102/doc/api-exception.md)
 
