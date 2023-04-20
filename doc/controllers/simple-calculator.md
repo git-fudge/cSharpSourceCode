@@ -1,7 +1,7 @@
 # Simple Calculator
 
-```java
-SimpleCalculatorController simpleCalculatorController = client.getSimpleCalculatorController();
+```ts
+const simpleCalculatorController = new SimpleCalculatorController(client);
 ```
 
 ## Class Name
@@ -13,9 +13,13 @@ SimpleCalculatorController simpleCalculatorController = client.getSimpleCalculat
 
 Calculates the expression using the specified operation.
 
-```java
-CompletableFuture<Double> getCalculateAsync(
-    final GetCalculateInput input)
+```ts
+async getCalculate(
+  operation: OperationTypeEnum,
+  x: number,
+  y: number,
+  requestOptions?: RequestOptions
+): Promise<ApiResponse<number>>
 ```
 
 ## Parameters
@@ -23,30 +27,29 @@ CompletableFuture<Double> getCalculateAsync(
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `operation` | [`OperationTypeEnum`](../../doc/models/operation-type-enum.md) | Template, Required | The operator to apply on the variables |
-| `x` | `double` | Query, Required | The LHS value |
-| `y` | `double` | Query, Required | The RHS value |
+| `x` | `number` | Query, Required | The LHS value |
+| `y` | `number` | Query, Required | The RHS value |
+| `requestOptions` | `RequestOptions \| undefined` | Optional | Pass additional request options. |
 
 ## Response Type
 
-`double`
+`number`
 
 ## Example Usage
 
-```java
-GetCalculateInput getCalculateInput = new GetCalculateInput.Builder(
-    OperationTypeEnum.MULTIPLY,
-    222.14,
-    165.14
-)
-.build();
-
-simpleCalculatorController.getCalculateAsync(getCalculateInput).thenAccept(result -> {
-    // TODO success callback handler
-    System.out.println(result);
-}).exceptionally(exception -> {
-    // TODO failure callback handler
-    exception.printStackTrace();
-    return null;
-});
+```ts
+const operation = 'MULTIPLY';
+const x = 222.14;
+const y = 165.14;
+try {
+  const { result, ...httpResponse } = await simpleCalculatorController.getCalculate(operation, x, y);
+  // Get more response info...
+  // const { statusCode, headers } = httpResponse;
+} catch(error) {
+  if (error instanceof ApiError) {
+    const errors = error.result;
+    // const { statusCode, headers } = error;
+  }
+}
 ```
 

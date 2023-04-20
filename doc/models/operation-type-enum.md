@@ -11,8 +11,8 @@ Possible operators are sum, subtract, multiply, divide
 
 | Name | Description |
 |  --- | --- |
-| `SUM` | Represents the sum operator |
-| `SUBTRACT` | Represents the subtract operator |
-| `MULTIPLY` | Represents the multiply operator |
-| `DIVIDE` | Represents the divide operator |
+| `sUM` | Represents the sum operator |
+| `sUBTRACT` | Represents the subtract operator |
+| `mULTIPLY` | Represents the multiply operator |
+| `dIVIDE` | Represents the divide operator |
 

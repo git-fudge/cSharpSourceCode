@@ -7,66 +7,63 @@ Simple calculator API hosted on APIMATIC
 
 ## Install the Package
 
-Install the SDK by adding the following dependency in your project's pom.xml file:
+Run the following command from your project directory to install the package from npm:
 
-```xml
-<dependency>
-  <groupId>io.github.git-fudge</groupId>
-  <artifactId>maven-testing-new</artifactId>
-  <version>5.5.100</version>
-</dependency>
+```ts
+npm install my-unique-ts-package@5.5.101
 ```
 
-You can also view the package at:
-https://mvnrepository.com/artifact/io.github.git-fudge/maven-testing-new/5.5.100
-
-## Test the SDK
-
-The generated code and the server can be tested using automatically generated test cases.
-JUnit is used as the testing framework and test runner.
-
-In Eclipse, for running the tests do the following:
-
-1. Select the project APIMATICCalculatorLib from the package explorer.
-2. Select `Run -> Run as -> JUnit Test` or use `Alt + Shift + X` followed by `T` to run the Tests.
+For additional package details, see the [Npm page for the my-unique-ts-package@5.5.101  npm](https://www.npmjs.com/package/my-unique-ts-package/v/5.5.101).
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| `environment` | Environment | The API environment. <br> **Default: `Environment.PRODUCTION`** |
-| `httpClientConfig` | [`ReadonlyHttpClientConfiguration`](doc/http-client-configuration.md) | Http Client Configuration instance. |
+| `environment` | Environment | The API environment. <br> **Default: `Environment.Production`** |
+| `timeout` | `number` | Timeout for API calls.<br>*Default*: `0` |
+| `httpClientOptions` | `Partial<HttpClientOptions>` | Stable configurable http client options. |
+| `unstableHttpClientOptions` | `any` | Unstable configurable http client options. |
+
+### HttpClientOptions
+
+| Parameter | Type | Description |
+|  --- | --- | --- |
+| `timeout` | `number` | Timeout in milliseconds. |
+| `httpAgent` | `any` | Custom http agent to be used when performing http requests. |
+| `httpsAgent` | `any` | Custom https agent to be used when performing http requests. |
+| `retryConfig` | `Partial<RetryConfiguration>` | Configurations to retry requests. |
+
+### RetryConfiguration
+
+| Parameter | Type | Description |
+|  --- | --- | --- |
+| `maxNumberOfRetries` | `number` | Maximum number of retries. <br> *Default*: `0` |
+| `retryOnTimeout` | `boolean` | Whether to retry on request timeout. <br> *Default*: `true` |
+| `retryInterval` | `number` | Interval before next retry. Used in calculation of wait time for next request in case of failure. <br> *Default*: `1` |
+| `maximumRetryWaitTime` | `number` | Overall wait time for the requests getting retried. <br> *Default*: `0` |
+| `backoffFactor` | `number` | Used in calculation of wait time for next request in case of failure. <br> *Default*: `2` |
+| `httpStatusCodesToRetry` | `number[]` | Http status codes to retry against. <br> *Default*: `[408, 413, 429, 500, 502, 503, 504, 521, 522, 524]` |
+| `httpMethodsToRetry` | `HttpMethod[]` | Http methods to retry against. <br> *Default*: `['GET', 'PUT']` |
 
 The API client can be initialized as follows:
 
-```java
-APIMATICCalculatorClient client = new APIMATICCalculatorClient.Builder()
-    .httpClientConfig(configBuilder -> configBuilder
-            .timeout(0))
-    .environment(Environment.PRODUCTION)
-    .build();
+```ts
+const client = new Client({
+  timeout: 0,
+  environment: Environment.Production,
+});
 ```
 
 ## List of APIs
 
-* [Simple Calculator](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/controllers/simple-calculator.md)
+* [Simple Calculator](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/controllers/simple-calculator.md)
 
 ## Classes Documentation
 
-* [Utility Classes](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/utility-classes.md)
-* [HttpRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-request.md)
-* [HttpResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-response.md)
-* [HttpStringResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-string-response.md)
-* [HttpContext](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-context.md)
-* [HttpBodyRequest](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-body-request.md)
-* [HttpCallback Interface](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-callback-interface.md)
-* [Headers](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/headers.md)
-* [ApiException](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/api-exception.md)
-* [Configuration Interface](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/configuration-interface.md)
-* [HttpClientConfiguration](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-client-configuration.md)
-* [HttpClientConfiguration.Builder](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.100/doc/http-client-configuration-builder.md)
+* [ApiResponse](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/api-response.md)
+* [ApiError](https://github.com/git-fudge/cSharpSourceCode/blob/5.5.101/doc/api-error.md)
 
